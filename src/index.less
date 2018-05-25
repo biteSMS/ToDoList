@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(131, 214, 165);
+}
+
+header {
+    user-select: none;
+    width: 100%;
+    height: 70px;
+    background: rgb(90, 170, 96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    @media (max-width: 430px) {
+        height: 15vw;
+        font-size: 4vw;
+    }
+}
+
+main {
+    margin: 30px auto;
+    margin-bottom: 50px;
+    width: 750px;
+    min-height: 500px;
+    background: rgb(255, 255, 255, .4);
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    border: 8px solid #fff;
+    border-radius: 6px;
+    @media (max-width: 430px) {
+        width: 80vw;
+        min-height: 120vw;
+    }
+}
+
+input[name="submit"] {
+    width: 600px;
+    height: 50px;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 25px 0;
+    @media (max-width: 430px) {
+        width: 60vw;
+    }
+}
+
+.todo {
+    width: 100%;
+}
+
+.options {
+    width: 750px;
+    height: 60px;
+    margin-bottom: 25px;
+    background: rgb(255, 255, 255, .5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div {
+        width: 100px;
+        height: 80%;
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        background: rgba(5, 163, 5, 0.3);
+        &:hover {
+            background: rgba(5, 163, 5, 0.5);
+        }
+        @media (max-width: 430px) {
+            width: 15vw;
+            font-size: 3.5vw;
+        }
+    }
+    .clearall {
+        background: rgba(224, 29, 15, 0.3);
+        &:hover {
+            background: rgba(224, 29, 15, 0.5);
+        }
+    }
+    @media (max-width: 430px) {
+        width: 80vw;
+        height: 12vw;
+    }
+}
+
+.options-active {
+    background: rgba(5, 163, 5, 0.5) !important;
+}
+
+.details {
+    width: 700px;
+    min-height: 40px;
+    padding: 10px 10px 10px 40px;
+    background: rgb(255, 255, 255, .5);
+    transition: ease-in-out .4s;
+    transition-delay: .2s;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    @media (max-width: 430px) {
+        min-height: 15vw;
+        padding: 1vw 6vw;
+    }
+    .date {
+        font-style: italic;
+        padding: 3px 0;
+    }
+    .content {
+        width: 670px;
+        padding: 5px 0;
+        font-size: 24px;
+        overflow-wrap: break-word;
+        @media (max-width: 430px) {
+            width: 62vw;
+        }
+    }
+    .right {
+        width: 82px;
+        display: flex;
+        flex-flow: column;
+        color: #fff;
+        transition: .5s;
+        transition-delay: .2s;
+        opacity: 0;
+        font-size: 0px;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .status {
+            background: rgba(5, 163, 5, 0.3);
+            flex: 1;
+            &:hover {
+                background: rgba(5, 163, 5, 0.5);
+            }
+        }
+        .clear {
+            background: rgba(224, 29, 15, 0.3);
+            flex: 1;
+            &:hover {
+                background: rgba(224, 29, 15, 0.5);
+            }
+        }
+        @media (max-width: 430px) {
+            flex-flow: row;
+            width: 67vw;
+        }
+    }
+    &:hover {
+        width: 800px;
+        .right {
+            font-size: 18px;
+            opacity: 1;
+        }
+        @media (max-width: 430px) {
+            width: 68vw;
+        }
+    }
+    @media (max-width: 430px) {
+        width: 68vw;
+        display: block;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    color: #616161;
+    user-select: none;
+    display: flex;
+    flex-flow: column;
+    p {
+        text-align: center;
+    }
+    div {
+        margin: 0 auto;
+        width: 40px;
+        &:hover {
+            svg {
+                fill: rgb(59, 59, 59);
+            }
+        }
+    }
+}
